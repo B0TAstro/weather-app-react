@@ -1,0 +1,45 @@
+{
+    "coord": {
+        "lon": 5.9224,
+        "lat": 45.6834
+    },
+    "weather": [
+        {
+            "id": 804,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 285.76,
+        "feels_like": 284.93,
+        "temp_min": 284.34,
+        "temp_max": 286.41,
+        "pressure": 1015,
+        "humidity": 71,
+        "sea_level": 1015,
+        "grnd_level": 943
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 6.69,
+        "deg": 340
+    },
+    "clouds": {
+        "all": 100
+    },
+    "dt": 1728040852,
+    "sys": {
+        "type": 1,
+        "id": 6494,
+        "country": "FR",
+        "sunrise": 1728020314,
+        "sunset": 1728061865
+    },
+    "timezone": 7200,
+    "id": 3038350,
+    "name": "Aix-les-Bains",
+    "cod": 200
+}
