@@ -35,10 +35,11 @@ h1 {
   background-position: center;
 }
 
-.clouds_night {
-  background-image: url('./assets/clouds_night.webp');
+.default {
+  background-image: url('./assets/default.webp');
 }
 
+/* Background images day */
 .clouds {
   background-image: url('./assets/clouds.webp');
 }
@@ -47,28 +48,12 @@ h1 {
   background-image: url('./assets/few_clouds.webp');
 }
 
-.mist_night {
-  background-image: url('./assets/mist_night.webp');
-}
-
 .mist {
   background-image: url('./assets/mist.webp');
 }
 
-.night {
-  background-image: url('./assets/night.webp');
-}
-
-.rain_night {
-  background-image: url('./assets/rain_night.webp');
-}
-
 .rain {
   background-image: url('./assets/rain.webp');
-}
-
-.snow_night {
-  background-image: url('./assets/snow.webp');
 }
 
 .snow {
@@ -81,6 +66,23 @@ h1 {
 
 .thunderstorm {
   background-image: url('./assets/thunderstorm.webp');
+}
+
+/* Background images night */
+.clouds_night {
+  background-image: url('./assets/clouds_night.webp');
+}
+
+.rain_night {
+  background-image: url('./assets/rain_night.webp');
+}
+
+.mist_night {
+  background-image: url('./assets/mist_night.webp');
+}
+
+.snow_night {
+  background-image: url('./assets/snow_night.webp');
 }
 
 .app:before {
@@ -114,7 +116,7 @@ h1 {
 
 .container {
   max-width: 700px;
-  height: 700px;
+  height: 100dvh;
   margin: 0 auto;
   padding: 0 1rem;
   position: relative;
@@ -150,4 +152,65 @@ h1 {
 
 .bold {
   font-weight: 700;
+}
+
+/* Style pour le conteneur de l'historique */
+.history-container {
+  position: relative;
+  color: white;
+  min-height: 100vh; /* Prendre toute la hauteur de la page */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; /* Empêche l'élément enfant d'être coupé */
+}
+
+/* Div qui contient l'image de fond, avec un flou appliqué uniquement à l'image */
+.history-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/default.webp');
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px); /* Applique le flou uniquement à l'image */
+  z-index: -1; /* Place l'image derrière le contenu */
+}
+
+/* Contenu du conteneur */
+.history-container .content {
+  position: relative;
+  z-index: 1; /* Place le contenu devant l'image de fond */
+}
+
+/* Titre de l'historique */
+.history-container h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Liste des éléments */
+.history-container ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Items d'historique */
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Améliore la lisibilité */
+  background-size: cover;
+  background-position: center;
 }
