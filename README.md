@@ -45,7 +45,6 @@ A responsive weather application built with React and Tailwind CSS, designed pri
 ## Future Improvements
 
 - Integration of weekly and monthly weather forecasts
-- Extended weather prediction capabilities
 - Enhanced API integration for more detailed weather data
 
 ## Getting Started
